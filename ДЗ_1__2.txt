@@ -257,3 +257,34 @@ C:\Users\Александр>dir
               27 папок  121 535 524 864 байт свободно
 
 C:\Users\Александр>
+
+
+To see what values a running MySQL server is using, type
+'mysqladmin variables' instead of 'mysqld --verbose --help'.
+
+РАЗОБРАЛСЯ :
+
+
+C:\Users\Александр>mysql
+ERROR 1045 (28000): Access denied for user 'ODBC'@'localhost' (using password: YES)
+
+C:\Users\Александр>mysql
+ERROR 1045 (28000): Access denied for user 'ODBC'@'localhost' (using password: YES)
+
+C:\Users\Александр>mysql
+ERROR 1045 (28000): Access denied for user 'ODBC'@'localhost' (using password: YES)
+
+C:\Users\Александр>mysql
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 86
+Server version: 8.0.27 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql>
