@@ -1,0 +1,259 @@
+Enter password: ************
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 19
+Server version: 8.0.27 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> CREATE DATABASE shop;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> CREATE DATABASE example;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| example            |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| shop               |
+| sys                |
+| world              |
++--------------------+
+8 rows in set (0.00 sec)
+
+mysql> DROP DATABASE SHOP;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| example            |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| sys                |
+| world              |
++--------------------+
+7 rows in set (0.00 sec)
+
+mysql> \u example
+Database changed
+
+mysql> SHOW TABLES;
+Empty set (0.00 sec)
+
+mysql> CREATE TABLE users (ID INT, name VARCHAR(20));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> SHOW TABLES;
++-------------------+
+| Tables_in_example |
++-------------------+
+| users             |
++-------------------+
+1 row in set (0.00 sec)
+
+mysql>
+
+
+
+
+
+Microsoft Windows [Version 10.0.22000.318]
+(c) Корпорация Майкрософт (Microsoft Corporation). Все права защищены.
+
+C:\Users\Александр>mysqldump -u root -p example > sample.sql
+Enter password: ************
+
+C:\Users\Александр>mysql -u root -p
+Enter password: ************
+
+C:\Users\Александр>dir
+ Том в устройстве C не имеет метки.
+ Серийный номер тома: 649F-2C4F
+
+ Содержимое папки C:\Users\Александр
+
+20.11.2021  09:37    <DIR>          .
+10.11.2021  22:31    <DIR>          ..
+03.01.2021  16:04    <DIR>          .atom
+20.11.2021  01:03               243 .bash_history
+13.05.2021  12:52    <DIR>          .cristalix
+19.11.2021  23:18    <DIR>          .eclipse
+21.07.2021  23:47               105 .gitconfig
+28.07.2021  21:44                20 .lesshst
+25.07.2021  23:00    <DIR>          .ssh
+07.11.2021  09:09    <DIR>          .swt
+10.11.2021  21:30    <DIR>          .vim
+11.11.2021  20:10             7 899 .viminfo
+10.11.2021  22:03               897 .vimrc
+19.11.2021  01:00    <DIR>          .VirtualBox
+03.01.2021  16:11    <DIR>          .vscode
+04.07.2021  21:23    <DIR>          3D Objects
+10.11.2021  22:41    <DIR>          Contacts
+20.11.2021  08:59    <DIR>          Desktop
+10.11.2021  22:41    <DIR>          Documents
+20.11.2021  00:12    <DIR>          Downloads
+20.11.2021  01:19                 0 echo
+10.11.2021  22:41    <DIR>          Favorites
+10.11.2021  22:41    <DIR>          Links
+10.11.2021  22:41    <DIR>          Music
+20.11.2021  00:08    <DIR>          MySQL
+16.11.2021  22:20    <DIR>          OneDrive
+10.11.2021  22:41    <DIR>          Pictures
+25.07.2021  23:10    <DIR>          project
+28.10.2021  20:47    <DIR>          PycharmProjects
+20.11.2021  09:38             1 868 sample.sql
+10.11.2021  22:41    <DIR>          Saved Games
+10.11.2021  22:41    <DIR>          Searches
+10.11.2021  21:55                16 test.py
+10.11.2021  22:41    <DIR>          Videos
+18.11.2021  22:35    <DIR>          VirtualBox VMs
+               8 файлов         11 048 байт
+              27 папок  121 586 302 976 байт свободно
+
+C:\Users\Александр>
+C:\Users\Александр>mysql -u root -p
+Enter password: ************
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 62
+Server version: 8.0.27 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE DATABASE sample;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> \q
+Bye
+
+C:\Users\Александр>mysql -u root -p sample < sample.sql
+Enter password: ************
+
+C:\Users\Александр>mysql -u root -p
+Enter password: ************
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 65
+Server version: 8.0.27 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| example            |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| sample             |
+| sys                |
+| world              |
++--------------------+
+8 rows in set (0.00 sec)
+
+mysql> USE sample
+Database changed
+mysql> SHOW TABLES;
++------------------+
+| Tables_in_sample |
++------------------+
+| users            |
++------------------+
+1 row in set (0.00 sec)
+
+mysql>
+
+
+C:\Users\Александр>mysqldump -u root -p mysql help_keyword > words.sql
+Enter password: *********
+mysqldump: Got error: 1045: Access denied for user 'root'@'localhost' (using password: YES) when trying to connect
+
+C:\Users\Александр>mysqldump -u root -p mysql help_keyword > words.sql
+Enter password: ************
+
+C:\Users\Александр>dir
+ Том в устройстве C не имеет метки.
+ Серийный номер тома: 649F-2C4F
+
+ Содержимое папки C:\Users\Александр
+
+20.11.2021  14:47    <DIR>          .
+10.11.2021  22:31    <DIR>          ..
+03.01.2021  16:04    <DIR>          .atom
+20.11.2021  01:03               243 .bash_history
+13.05.2021  12:52    <DIR>          .cristalix
+19.11.2021  23:18    <DIR>          .eclipse
+21.07.2021  23:47               105 .gitconfig
+28.07.2021  21:44                20 .lesshst
+25.07.2021  23:00    <DIR>          .ssh
+07.11.2021  09:09    <DIR>          .swt
+10.11.2021  21:30    <DIR>          .vim
+11.11.2021  20:10             7 899 .viminfo
+10.11.2021  22:03               897 .vimrc
+19.11.2021  01:00    <DIR>          .VirtualBox
+03.01.2021  16:11    <DIR>          .vscode
+04.07.2021  21:23    <DIR>          3D Objects
+10.11.2021  22:41    <DIR>          Contacts
+20.11.2021  08:59    <DIR>          Desktop
+10.11.2021  22:41    <DIR>          Documents
+20.11.2021  09:49    <DIR>          Downloads
+20.11.2021  01:19                 0 echo
+10.11.2021  22:41    <DIR>          Favorites
+10.11.2021  22:41    <DIR>          Links
+10.11.2021  22:41    <DIR>          Music
+20.11.2021  10:09    <DIR>          MySQL
+16.11.2021  22:20    <DIR>          OneDrive
+10.11.2021  22:41    <DIR>          Pictures
+25.07.2021  23:10    <DIR>          project
+28.10.2021  20:47    <DIR>          PycharmProjects
+20.11.2021  09:38             1 868 sample.sql
+10.11.2021  22:41    <DIR>          Saved Games
+10.11.2021  22:41    <DIR>          Searches
+10.11.2021  21:55                16 test.py
+10.11.2021  22:41    <DIR>          Videos
+18.11.2021  22:35    <DIR>          VirtualBox VMs
+20.11.2021  14:53            20 044 words.sql
+               9 файлов         31 092 байт
+              27 папок  121 535 524 864 байт свободно
+
+C:\Users\Александр>
